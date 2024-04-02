@@ -2,7 +2,7 @@
 
 
     <!-- News and Events Section -->
-    <section class="container mx-auto px-16 lg:px-32 min-h-full mb-28">
+    <section class="container mx-auto px-16 lg:px-32 min-h-full mb-10">
 
         <div class="flex justify-center">
             <div class="text-center md:w-3/4">
@@ -38,7 +38,7 @@
                     </h1>
                     <a target="_blank" :href="item.permalink">
                         <strong>
-                            <h5 class="pt-3 text-orange-900">Ver Publicación</h5>
+                            <h5 class="pt-3 text-orange-900 dark:text-orange-400">Ver Publicación</h5>
                         </strong>
 
                     </a>

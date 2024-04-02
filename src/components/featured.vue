@@ -64,29 +64,29 @@ import FeaturedProduct from './featured-product.vue'
 
 
 const bubbleTes = [
-    { title: "Té Clásico", desc: "Té de .....", image: "/tes/te-clasico.png", small: 5.00, large: 5.50 },
-    { title: "Té de Jazmín", desc: "Té de .....", image: "/tes/te-jazmin.png" },
-    { title: "Té de Taro", desc: "Té de .....", image: "/tes/te-taro.png" },
-    { title: "Té de Chocolate", desc: "Té de .....", image: "/tes/te-chocolate.png" },
+    { title: "Té Clásico", desc: "Té de .....", image: "./tes/te-clasico.png", small: 5.00, large: 5.50 },
+    { title: "Té de Jazmín", desc: "Té de .....", image: "./tes/te-jazmin.png" },
+    { title: "Té de Taro", desc: "Té de .....", image: "./tes/te-taro.png" },
+    { title: "Té de Chocolate", desc: "Té de .....", image: "./tes/te-chocolate.png" },
 
 ]
 
 
 const coldTes = [
-    { title: "Té de Limón Fresco", desc: "Té de .....", image: "/tes/te-clasico.png", small: 5, large: 5.50 },
-    { title: "Té de Limón con Yogurt", desc: "Té de .....", image: "/tes/te-jazmin.png", small: 5.00, large: 5.50 },
-    { title: "Té de Uva y Lima", desc: "Té de .....", image: "/tes/te-taro.png", small: 5.00, large: 5.50 },
-    { title: "Té Negro con Limón", desc: "Té de .....", image: "/tes/te-chocolate.png", small: 5.00, large: 5.50 },
-    { title: "Té de Naranja", desc: "Té de .....", image: "/tes/te-clasico.png", small: 5.00, large: 5.50 },
-    { title: "Té de Mango", desc: "Té de .....", image: "/tes/te-jazmin.png", large: 5.50 },
-    { title: "Té de Arándanos", desc: "Té de .....", image: "/tes/te-taro.png", small: 5.00, large: 5.50 },
-    { title: "Té Azul", desc: "Té de .....", image: "/tes/te-chocolate.png", small: 5.00, large: 5.50 },
+    { title: "Té de Limón Fresco", desc: "Té de .....", image: "./tes/te-clasico.png", small: 5, large: 5.50 },
+    { title: "Té de Limón con Yogurt", desc: "Té de .....", image: "./tes/te-jazmin.png", small: 5.00, large: 5.50 },
+    { title: "Té de Uva y Lima", desc: "Té de .....", image: "./tes/te-taro.png", small: 5.00, large: 5.50 },
+    { title: "Té Negro con Limón", desc: "Té de .....", image: "./tes/te-chocolate.png", small: 5.00, large: 5.50 },
+    { title: "Té de Naranja", desc: "Té de .....", image: "./tes/te-clasico.png", small: 5.00, large: 5.50 },
+    { title: "Té de Mango", desc: "Té de .....", image: "./tes/te-jazmin.png", large: 5.50 },
+    { title: "Té de Arándanos", desc: "Té de .....", image: "./tes/te-taro.png", small: 5.00, large: 5.50 },
+    { title: "Té Azul", desc: "Té de .....", image: "./tes/te-chocolate.png", small: 5.00, large: 5.50 },
 ]
 
 const otros = [
-    { title: "Ramune", desc: "Fresa/Melón/Limón/Piña/Lychee", image: "/tes/12.jpg", price: 3 },
-    { title: "Mochi", desc: "Chocolate/Vainilla/Banana y Chocolate/Mango/Queso Fresa", image: "/tes/13.jpg", price: 2.5 },
-    { title: "Dorayaki", desc: "Chocolate/Judías Rojas", image: "/tes/14.jpg", price: 3 }
+    { title: "Ramune", desc: "Fresa/Melón/Limón/Piña/Lychee", image: "./tes/12.jpg", price: 3 },
+    { title: "Mochi", desc: "Chocolate/Vainilla/Banana y Chocolate/Mango/Queso Fresa", image: "./tes/13.jpg", price: 2.5 },
+    { title: "Dorayaki", desc: "Chocolate/Judías Rojas", image: "./tes/14.jpg", price: 3 }
 ]
 
 </script>

@@ -1,16 +1,8 @@
 <template>
-  <div class="dark:bg-gray-800 dark:text-white">
-    <DarkMode />
+  <div id="carta">
     <Header />
     <Featured />
     <GreatTea />
-    <!-- 
-    <Clients />
-    -->
-    <News class="" />
-    <Map />
-    <Footer />
-    <!-- End Footer Section -->
   </div>
 </template>
 
@@ -22,6 +14,8 @@ import Featured from '@/components/featured.vue'
 import GreatTea from '@/components/great-tea.vue'
 import Map from '@/components/map.vue'
 import Clients from '@/components/clients.vue'
-import DarkMode from '@/components/darkmode.vue'
+
+
+
 
 </script>

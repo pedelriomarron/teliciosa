@@ -3,7 +3,7 @@
     <div class=" items-center">
         <div>
             <h1 class="text-5xl sm:text-7xl md:text-7xl font-semibold title-banner">
-                <span class="text-orange-600">T E L I C I O S A</span>
+                <span class="text-orange-600" style="white-space: nowrap; font-size: 90%;">T E L I C I O S A</span>
                 <br />
                 <span class="text-orange-700">Bubble Tea</span>
                 <br />

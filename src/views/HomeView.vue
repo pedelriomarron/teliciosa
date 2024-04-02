@@ -7,7 +7,7 @@
     <!-- 
     <Clients />
     -->
-    <News class="" />
+    <News class=" " />
     <Map />
     <Footer />
     <!-- End Footer Section -->

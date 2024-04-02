@@ -17,59 +17,78 @@
         </div>
 
 
-
+        <!--
         <div class="flex justify-center">
             <div class="w-3/4">
                 <iframe class="w-full" height="710" frameborder="0" scrolling="no" allowtransparency="true"
                     src="https://www.instagram.com/teliciosa/embed"></iframe>
             </div>
         </div>
+ -->
 
 
 
-        <!-- 
         <div class="grid md:grid-cols-3 gap-6">
-            <div class="rounded-lg border-zinc-100 border-2">
-                <img class="w-5/6 mx-auto my-5" src="/images/news-1.png" alt="" />
+            <div v-for="item in instaImages" class="rounded-lg border-zinc-100 border-2">
+                <img class="w-5/6 mx-auto my-5 rounded-lg border-zinc-100 border-2" :src="item.media_url" alt="" />
                 <div class="p-10">
-                    <small>Feb 05, 2027</small>
+                    <small>{{ formattedDate(item.timestamp) }}</small>
                     <h1 class="text-xl font-bold">
-                        Collecting 8 points for discount
+                        {{ item.caption }}
                     </h1>
-                    <p>
-                        There are many variations of passages of Lorem Ipsum available.
-                    </p>
-                    <h5 class="font-medium pt-3">Learn More</h5>
-                </div>
-            </div>
-            <div class="rounded-lg border-zinc-100 border-2">
-                <img class="w-5/6 mx-auto my-5" src="/images/news-2.png" alt="" />
-                <div class="p-10">
-                    <small>Feb 05, 2027</small>
-                    <h1 class="text-xl font-bold">
-                        Collecting 8 points for discount
-                    </h1>
-                    <p>
-                        There are many variations of passages of Lorem Ipsum available.
-                    </p>
-                    <h5 class="font-medium pt-3">Learn More</h5>
-                </div>
-            </div>
-            <div class="rounded-lg border-zinc-100 border-2">
-                <img class="w-5/6 mx-auto my-5" src="/images/news-3.png" alt="" />
-                <div class="p-10">
-                    <small>Feb 05, 2027</small>
-                    <h1 class="text-xl font-bold">
-                        Collecting 8 points for discount
-                    </h1>
-                    <p>
-                        There are many variations of passages of Lorem Ipsum available.
-                    </p>
-                    <h5 class="font-medium pt-3">Learn More</h5>
+                    <a target="_blank" :href="item.permalink">
+                        <strong>
+                            <h5 class="pt-3 text-orange-900">Ver Publicación</h5>
+                        </strong>
+
+                    </a>
                 </div>
             </div>
         </div>
-        -->
+
     </section>
     <!-- News and Events Section -->
 </template>
+
+
+<script setup>
+
+import { ref, onMounted } from "vue"
+const instaImages = ref([])
+
+
+
+
+function getInstagram() {
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    var requestOptions = {
+        method: "get",
+        headers: myHeaders,
+        redirect: "follow",
+
+    };
+
+    fetch("https://v1.nocodeapi.com/pedelrio/instagram/DdysNXkQBeAJsjvU", requestOptions)
+        .then(response => response.text())
+        .then(result => {
+            instaImages.value = JSON.parse(result).data
+            console.log(instaImages.value)
+
+        }
+        )
+        .catch(error => console.log('error', error));
+}
+
+getInstagram()
+
+function formattedDate(str) {
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const date = new Date(str);
+    const month = months[date.getMonth()];
+    const day = date.getDate();
+    const year = date.getFullYear();
+
+    return `${month} ${day}, ${year}`;
+}
+</script>
